@@ -1,4 +1,4 @@
-import { Category } from "../routes/model/Category";
+import { Category } from "../model/Category";
 
 //DTO => Data Transfer Object
 interface ICreateCategoryDTO {
@@ -21,6 +21,13 @@ class CategoresRepositores {
         created_ad: new Date()
       })
       this.categories.push(category)
+  }
+  list():Category[]{
+    return this.categories;
+  }
+  findByName(name:string): Category {
+    const category = this.categories.find(category => category.name === name)
+    return category
   }
 }
 

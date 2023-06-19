@@ -6,6 +6,6 @@ app.use(express.json())
 
 app.use("/categories",categoriesRoutes)
 
-app.listen(3333, () => {
+app.listen(3334, () => {
   console.log('run server')
 })
