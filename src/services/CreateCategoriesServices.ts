@@ -1,5 +1,4 @@
-import { CategoresRepositores } from "../repositores/CategoriesRepositores";
-
+import { ICategoryRepositores } from "../repositores/ICategoriesRepositores";
 
 interface IRequest {
   name:string;
@@ -7,7 +6,7 @@ interface IRequest {
 }
 
 class CreateCategoriesServices {
-  constructor(private categoresRepositores:CategoresRepositores){}
+  constructor(private categoresRepositores:ICategoryRepositores){}
   execute({name,description}:IRequest): void{
     const categoryAlreadExists = this.categoresRepositores.findByName(name)
   if(categoryAlreadExists){
