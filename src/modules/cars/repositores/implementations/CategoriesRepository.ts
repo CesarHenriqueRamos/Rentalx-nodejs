@@ -9,12 +9,6 @@ class CategoriesRepository implements ICategoryRepositores {
   constructor(){
     this.repository = getRepository(Category)
   }
-  // public static getIstance():CategoriesRepository{
-  //   if(!CategoriesRepository.INSTANCE){
-  //     CategoriesRepository.INSTANCE = new CategoriesRepository();
-  //   }
-  //   return CategoriesRepository.INSTANCE
-  // }
 
   async create({name, description}:ICreateCategoryDTO):Promise<void>{
        const category = this.repository.create({

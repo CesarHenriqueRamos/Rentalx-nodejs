@@ -76,6 +76,42 @@
           }
         }
       }
-    }
+    },
+    "/specification":{
+      "post":{
+        "tags":["Specifications"],
+        "summary":"Create a Specification",
+        "description":"Create a new Specification",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "name":{
+                    "type":"string"
+                  },
+                  "description":{
+                    "type":"string"
+                  }
+                },
+                "example":{
+                  "name": "cambio automatico",
+	"               description": "carro automatico"
+                }
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description":"Created"
+          },
+          "500":{
+            "description":"Specification already exists"
+          }
+        }
+      }
+     }
   }
 }
