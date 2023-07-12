@@ -76,6 +76,32 @@
           }
         }
       }
+    },"/categories/import":{
+      "post":{
+        "tags":["Category"],
+        "summary":"Create a category",
+        "description":"Create a new Category",
+        "requestBody":{
+          "content":{
+            "multipart/form-data":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "file":{
+                    "type":"string",
+                    "format":"binary"
+                  }
+                }                
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description":"Created Categories"
+          }
+        }
+      }
     },
     "/specification":{
       "post":{
