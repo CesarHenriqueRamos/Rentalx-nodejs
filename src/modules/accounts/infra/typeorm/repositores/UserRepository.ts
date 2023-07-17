@@ -1,5 +1,5 @@
 import { Repository, getRepository } from "typeorm"
-import { Users } from "@modules/accounts/entities/User"
+import { Users } from "@modules/accounts/infra/typeorm/entities/User"
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO"
 
 class UserRepository{
