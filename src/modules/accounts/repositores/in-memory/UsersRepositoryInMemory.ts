@@ -1,6 +1,5 @@
-import { hash } from "bcrypt";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { Users } from "../../entities/User";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { Users } from "@modules/accounts/entities/User";
 import { IUserRepository } from "../IUsersRepository";
 
 class UsersRepositoryInMemory implements IUserRepository{
